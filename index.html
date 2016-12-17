@@ -1,12 +1,14 @@
 <html>
 	<head>
+		<script src="jquery-3.1.1.min.js"></script>
 		<script type="text/javascript">
 			$.getJSON('//gd.geobytes.com/GetCityDetails?callback=?', function(data) {
     			var country = data["geobytescountry"];
-    			if(country == "United States" && /Android/i.test(navigator.userAgent)){
+    			if(country == "Canada"){
         			window.location="https://survey.ubc.ca/s/androidusagesurvey";
     			}
     			else{
+    				console.log("Termination");
         			window.location="some termination url";
     			}
 			});	
