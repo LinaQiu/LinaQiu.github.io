@@ -2,7 +2,7 @@
 	<head>
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 		<script type="text/javascript">
-			$.getJSON('//gd.geobytes.com/GetCityDetails?callback=?', function(data) {
+			$.getJSON('http://gd.geobytes.com/GetCityDetails?callback=?', function(data) {
     			var country = data["geobytescountry"];
     			if(country == "Canada"){
         			window.location="https://survey.ubc.ca/s/androidusagesurvey";
