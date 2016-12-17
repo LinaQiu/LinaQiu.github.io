@@ -1,7 +1,15 @@
 <html>
 	<head>
 		<script type="text/javascript">
-			window.location="https://survey.ubc.ca/s/androidusagesurvey";
+			$.getJSON('//gd.geobytes.com/GetCityDetails?callback=?', function(data) {
+    			var country = data["geobytescountry"];
+    			if(country == "United States" && /Android/i.test(navigator.userAgent)){
+        			window.location="https://survey.ubc.ca/s/androidusagesurvey";
+    			}
+    			else{
+        			window.location="some termination url";
+    			}
+			});	
 		</script>
 	</head>
 	<body>
